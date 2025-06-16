@@ -1,0 +1,167 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /Name /F1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 823 >>
+stream
+BT
+/F1 12 Tf
+50 792 Td
+(Die Quiz-App ist eine einfache Android-Anwendung, die verschiedene Quizkategorien) Tj
+50 776 Td
+(anbietet. Auf dem Startbildschirm kann man aus den Themen "Hauptstädte", "Geschichte" und) Tj
+50 760 Td
+("Erfinder" wählen. Anschließend werden nacheinander vier Fragen gestellt. Für jede Frage) Tj
+50 744 Td
+(gibt es vier Antwortmöglichkeiten und eine Fortschrittsanzeige zeigt an, wie viele Fragen) Tj
+50 728 Td
+(bereits richtig beantwortet wurden. Der Zweck der App besteht darin, Nutzern ein kurzes) Tj
+50 712 Td
+(Wissensspiel zu ermöglichen. Alle Fragen und Antworten sind in Ressourcen-Dateien) Tj
+50 696 Td
+(hinterlegt, sodass keine Netzwerkverbindung erforderlich ist. Über den Startbildschirm) Tj
+50 680 Td
+(gelangt man mit dem Button "Quiz starten" in die eigentliche Fragerunde.) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1063 >>
+stream
+BT
+/F1 12 Tf
+50 792 Td
+(Die Bedienoberfläche nutzt ein schlichtes Layout. In der StartActivity gibt es einen) Tj
+50 776 Td
+(Titel, einen Button zur Auswahl des Quiz und einen weiteren Button zum Starten. Die) Tj
+50 760 Td
+(Auswahl erfolgt über ein Popup-Menü. Sobald man ein Quiz gewählt hat, wird der Startknopf) Tj
+50 744 Td
+(aktiviert. Im QuizActivity werden der Titel des gewählten Quiz, die Frage, die) Tj
+50 728 Td
+(Antwortbuttons, eine Fortschrittsleiste sowie ein Feedbackfeld dargestellt. Nach einer) Tj
+50 712 Td
+(Antwort erscheint sofort eine Meldung, ob diese richtig oder falsch war. Am Ende kann der) Tj
+50 696 Td
+(Nutzer mit "Zurück zum Start" wieder zur Auswahl gehen. Das Design orientiert sich an) Tj
+50 680 Td
+(Material Design 3 und passt sich automatisch an den Light- und Dark-Mode des Geräts an.) Tj
+50 664 Td
+(Die Schriftgrößen wurden so gewählt, dass der Inhalt auch auf kleineren Displays lesbar) Tj
+50 648 Td
+(bleibt. Insgesamt ist das Layout minimalistisch gehalten, damit der Fokus auf den Fragen) Tj
+50 632 Td
+(liegt.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1443 >>
+stream
+BT
+/F1 12 Tf
+50 792 Td
+(Die StartActivity verwaltet den Einstieg. Dort sind die Buttons "Quizauswahl" und "Quiz) Tj
+50 776 Td
+(starten" definiert. Das Popup-Menü wird über eine XML-Datei in res/menu aufgebaut und) Tj
+50 760 Td
+(enthält die drei Quiztypen. Das ausgewählte Quiz wird in der Variable selectedQuizType) Tj
+50 744 Td
+(gespeichert. Beim Starten wird diese Information per Intent an die QuizActivity übergeben.) Tj
+50 728 Td
+(In der QuizActivity werden die Fragen und Antwortmöglichkeiten aus String-Arrays geladen.) Tj
+50 712 Td
+(Für jede Kategorie existieren Arrays für die Fragen, die Optionen und die Indizes der) Tj
+50 696 Td
+(richtigen Antworten. Die Klasse speichert außerdem den aktuellen Index und zählt die) Tj
+50 680 Td
+(richtigen Antworten mit. Nach jeder Auswahl wird geprüft, ob die Antwort mit dem korrekten) Tj
+50 664 Td
+(Index übereinstimmt. Das Feedback wird in einem TextView angezeigt und der) Tj
+50 648 Td
+(Fortschrittsbalken erhöht sich nur bei richtigen Antworten. Danach kann man zur nächsten) Tj
+50 632 Td
+(Frage wechseln oder zurück zum Startbildschirm. Nach der letzten Frage wird der Buttontext) Tj
+50 616 Td
+(automatisch auf "Zurück zum Start" gesetzt, um das Quiz zu beenden. Dieses Verhalten ist) Tj
+50 600 Td
+(im Code klar strukturiert: Erst Frage anzeigen, dann auf Klick auswerten, Feedback) Tj
+50 584 Td
+(schreiben, Knöpfe umschalten und schließlich auf Wunsch neu starten.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1440 >>
+stream
+BT
+/F1 12 Tf
+50 792 Td
+(Die Projektstruktur folgt der Standardaufteilung eines Android-Gradle-Projekts. Im) Tj
+50 776 Td
+(Verzeichnis app/src/main/java liegen die Activity-Klassen, während app/src/main/res die) Tj
+50 760 Td
+(Layouts, Menüs und Strings enthält. Die Dateien build.gradle.kts und libs.versions.toml) Tj
+50 744 Td
+(definieren die Abhängigkeiten. Als Kompilierungsziel ist Android API Level 35 eingestellt.) Tj
+50 728 Td
+(Die App verwendet die Material3-Bibliothek und benötigt mindestens Android 7.0 \(API 24\).) Tj
+50 712 Td
+(Die Ressourcen für die Quizfragen sind vollständig im strings.xml hinterlegt, was eine) Tj
+50 696 Td
+(einfache Erweiterung erlaubt. Jede Kategorie nutzt eigene String-Arrays für Fragen und) Tj
+50 680 Td
+(Antwortmöglichkeiten. Die zugehörigen korrekten Indizes werden in Integer-Arrays) Tj
+50 664 Td
+(gespeichert. Dadurch ist die Logik in der Activity unabhängig vom konkreten Quizinhalt und) Tj
+50 648 Td
+(lässt sich leicht anpassen. Die Unit-Tests unter app/src/test stellen sicher, dass) Tj
+50 632 Td
+(einfache Funktionen korrekt arbeiten, während die Instrumentation-Tests die App-) Tj
+50 616 Td
+(Initialisierung prüfen. Insgesamt ist der Code überschaubar und modular aufgebaut: Ein) Tj
+50 600 Td
+(Einstiegspunkt \(StartActivity\) und eine zentrale Anzeige-Activity \(QuizActivity\) laden) Tj
+50 584 Td
+(statische Daten aus den Ressourcen und reagieren auf Benutzereingaben.) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R ] /Count 4 >>
+endobj
+11 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000089 00000 n 
+0000000963 00000 n 
+0000001090 00000 n 
+0000002205 00000 n 
+0000002332 00000 n 
+0000003827 00000 n 
+0000003954 00000 n 
+0000005446 00000 n 
+0000005573 00000 n 
+0000005651 00000 n 
+trailer
+<< /Size 12 /Root 11 0 R >>
+startxref
+5702
+%%EOF
